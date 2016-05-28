@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+version = '0.0.1'
+
+sourceCompatibility = 1.8
+mainClassName = "bzh.plantkelt.puzzlesolver.Main"
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testCompile 'junit:junit:4.+'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Version': version
+    }
+}
+
+applicationDefaultJvmArgs = [ ]
