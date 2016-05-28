@@ -21,17 +21,17 @@ we simply look for the shortest path between the start board position to any fin
 The solver is independant from any Klotski consideration and any puzzle game that is similar
 could be solved by the generic solver. A new puzzle to solve should simply implement the `Board` interface:
 
-    public interface Board {
-       // Compute all possible moves from this board position
-	    public List<Board> computeMoves();
-	    // Is this board winning (ie solved)?
-	    public boolean isWinning();
-	    // Compute a unique key for this board
-	    public Long getKey();
-	    // Print the board
-	    public void print(PrintStream ps);
-	    // Is this board equals to another
-	    public boolean equals(Object b);
-    } 
+	public interface Board {
+		// Compute all possible moves from this board position
+		public List<Board> computeMoves();
+		// Is this board winning (ie solved)?
+		public boolean isWinning();
+		// Compute a unique key for this board
+		public Long getKey();
+		// Print the board
+		public void print(PrintStream ps);
+		// Is this board equals to another
+		public boolean equals(Object b);
+	}
 
 This program is open-source and is release under a GPLv3 license. **Have fun!**
